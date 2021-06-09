@@ -1,0 +1,120 @@
+@import '../../variables.scss';
+
+@keyframes background-flashing {
+    50% {
+        background-color: rgba($listing-photo-background-color, 0.5);
+    }    
+}
+
+.listing-card {
+    display: flex;
+
+    margin-bottom: 38px;
+
+    @media (min-width: $tablet-width) {
+        &:nth-child(2n) {
+            margin-left: 22px;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        &:nth-child(2n) {
+            margin-left: 0;
+        }
+
+        &:not(:nth-child(3n)) {        
+            margin-right: 22px;
+        }
+    }
+}
+
+.listing-card__wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: $listing-card-background-color;
+    outline: 1px solid $listing-card-border-color;
+}
+
+.listing-card__photo-wrapper-link {
+    display: block;
+    position: relative;
+    font-size: 0;
+}
+
+.listing-card__photo {
+    display: block;
+    width: 360px;
+    height: 227px;
+    object-fit: cover;
+    background-color: $listing-photo-background-color;
+    animation: 1s linear 15 background-flashing;
+
+    @media (min-width: $tablet-width) {
+        width: 379px;
+    }
+}
+
+.listing-card__tag-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.listing-card__tag {
+    font-family: $font-primary;
+    font-size: 12px;
+    font-weight: 700;
+    color: $font-color-tag;
+    margin: 7px 11px;
+}
+
+.listing-card__info-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 17px;
+}
+
+.listing-card__link {
+    display: block;
+    margin-top: 20px;
+}
+
+.listing-card__title {
+    margin: 0;
+    font-family: $font-primary;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+}
+
+.listing-card__address {
+    font-family: $font-primary;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.listing-card__price {
+    font-family: $font-primary;
+    margin: 0;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.listing-card__ownership-options {
+    font-family: $font-primary;
+    margin: 0;
+    margin-top: 7px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+}
+

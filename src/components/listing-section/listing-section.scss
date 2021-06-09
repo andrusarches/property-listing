@@ -1,0 +1,65 @@
+@import '../../variables.scss'; 
+
+.listing {
+    margin-top: 45px;
+}
+
+.listing__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.listing__error-message {
+    margin: 0 auto;
+    margin-top: 20px;
+    font-family: $font-primary;
+    color: $font-color-primary;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.listing__see-more-button {
+    font-family: $font-primary;
+    margin: 24px auto 50px auto;
+    font-weight: 700; 
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    border-radius: 25px;
+    border: 1px solid $listing-see-more-button-border-color;
+    padding: 12px 28px;
+    background-color: $listing-see-more-button-background-color;
+    transition: .3s background-color ease-in-out, .3s color ease-in-out, .3s box-shadow ease-in-out;
+    color: $font-color-primary;
+    align-items: center;
+
+    & svg {
+        margin-left: 7px;
+        width: 7px;
+        height: 17px;
+
+        & use {
+            stroke: $font-color-primary;
+            transition: 2s stroke;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $listing-see-more-button-background-color-active;
+        color: $font-color-secondary;
+
+        & use {
+            stroke: $font-color-secondary;
+        }
+    }
+
+    &:active {
+        box-shadow: inset 0 0 5px 0 $font-color-primary;
+        color: $font-color-primary;
+
+        & use {
+            stroke: $font-color-primary;
+        }
+    }
+}

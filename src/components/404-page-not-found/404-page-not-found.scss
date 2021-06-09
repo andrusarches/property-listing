@@ -1,0 +1,31 @@
+@import '../../variables.scss';
+
+.page-main--not-found {
+    min-height: 100vh;
+    display: flex;
+}
+
+.not-found {
+    margin: auto 0;
+}
+
+.not-found__wrapper {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.not-found__heading {
+    color: $listing-section-heading-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    text-align: center;
+    margin: 0;
+    margin-top: 36px;
+}
+
+.not-found__link {
+    margin-top: 30px;
+}

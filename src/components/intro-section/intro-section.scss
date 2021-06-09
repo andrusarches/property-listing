@@ -1,0 +1,16 @@
+@import '../../variables.scss';
+
+.intro {
+    margin: 0;
+}
+
+.intro__heading {
+    font-family: $font-primary;
+    color: $listing-section-heading-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    text-align: center;
+    margin: 0;
+    margin-top: 36px;
+}

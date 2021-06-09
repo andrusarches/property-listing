@@ -1,0 +1,20 @@
+@import '../../variables.scss';
+
+.listing-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: $mobile-width) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+
+.listing-list__error-message {
+    margin: 0 auto;
+    margin-top: 20px;
+    font-family: $font-primary;
+    color: $font-color-primary;
+    font-size: 20px;
+    font-weight: 700;
+}
