@@ -15,7 +15,7 @@ const ListingSection = ({propertyData, cardLimit, onSeeMoreClick, propertyDataSt
         onSeeMoreClick();
     };
 
-    const {propertyDataIsLoading, propertyDataIsError} = propertyDataState;
+    const {fetchedPropertyData, propertyDataIsLoading, propertyDataIsError} = propertyDataState;
 
     if (propertyDataIsLoading) {
         return (
@@ -41,7 +41,7 @@ const ListingSection = ({propertyData, cardLimit, onSeeMoreClick, propertyDataSt
             <div className="listing__wrapper content-wrapper">
                 <h2 className="visually-hidden">Recently Developed Property Listing</h2>
 
-                <ListingList propertyData={propertyData} cardLimit={cardLimit} />
+                <ListingList fetchedPropertyData={fetchedPropertyData} propertyData={propertyData} cardLimit={cardLimit} />
 
                 {cardLimit < propertyData.length 
                     ?

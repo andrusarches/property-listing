@@ -1,8 +1,8 @@
 {
-  "name": "property-listing",
+  "name": "bugfix",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://andrusarches.github.com/property-listing",
+  "homepage": "https://andrusarches.github.com/bugfix",
   "dependencies": {
     "node-sass": "^6.0.0",
     "prop-types": "^15.7.2",
