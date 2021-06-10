@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import IntroSection from '../intro-section/intro-section';
 import ListingSection from '../listing-section/listing-section';
@@ -19,6 +20,12 @@ const Main = ({propertyData, onInputChange, cardLimit, onSeeMoreClick, propertyD
             </main>
         </>
     );
+};
+
+Main.propTypes = {
+    propertyDataState: PropTypes.object.isRequired,
+    propertyData: PropTypes.array.isRequired,
+    cardLimit: PropTypes.number.isRequired
 };
 
 export default Main;

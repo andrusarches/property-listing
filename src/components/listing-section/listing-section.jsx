@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './listing-section.scss';
 
@@ -56,6 +57,11 @@ const ListingSection = ({propertyData, cardLimit, onSeeMoreClick, propertyDataSt
             </div>
         </section>
     );
+};
+
+ListingSection.propTypes = {
+    propertyData: PropTypes.array.isRequired,
+    cardLimit: PropTypes.number.isRequired
 };
 
 export default ListingSection;

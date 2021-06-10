@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './listing-list.scss';
 
@@ -9,11 +10,17 @@ const ListingList = ({propertyData, cardLimit}) => {
     return (
         <ul className="listing-list">
             {propertyData.length > 0
-                ? propertyData.slice(0, cardLimit ? cardLimit : propertyData.length).map((item) => (<ListingCard key={item.id} data={item} />))
+                ? propertyData.slice(0, cardLimit).map((item) => (<ListingCard key={item.id} data={item} />))
                 : <h3 className="listing-list__error-message">Sorry, nothing was found!</h3>    
             }
         </ul>
     );
 };
+
+ListingList.propTypes = {
+    propertyData: PropTypes.array.isRequired,
+    cardLimit: PropTypes.number.isRequired
+};
+
 
 export default ListingList;
